@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loginPage">
+    <div class="login-box">
+        <h2>🏦 Bank Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginMessage"></p>
+    </div>
+</div>
+<div id="loginPage" class="login-page">
+    <div class="login-box">
+        <h1>🏦 Bank Login</h1>
+        <p>Secure Banking System</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginMessage"></p>
+    </div>
+</div>
+<div id="dashboard">
+    <header>
+        <section class="customer-registration">
+    <h2>Open New Account</h2>
+<section class="search-account">
+    <h2>Search Customer Account</h2>
+<section class="account-list">
+    <h2>Customer Accounts</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Account No</th>
+                <th>Account Type</th>
+                <th>Initial Balance</th>
+            </tr>
+        </thead>
+
+        <tbody id="accountTable">
+        </tbody>
+    </table>
+</section>
+    <input type="text" id="searchAccount"
+           placeholder="Enter Account Number">
+
+    <button onclick="searchCustomer()">Search Account</button>
+
+    <div id="searchResult"></div>
+</section>
+    <input type="text" id="newCustomerName" placeholder="Customer Name">
+
+    <input type="text" id="newAccountNumber" placeholder="Account Number">
+
+    <select id="newAccountType">
+        <option value="Current Account">Current Account</option>
+        <option value="Savings Account">Savings Account</option>
+    </select>
+
+    <input type="number" id="initialDeposit" placeholder="Initial Deposit">
+
+    <button onclick="createAccount()">Create Account</button>
+</section>
+        <h1>🏦 Bank Management System</h1>
+        <p>Customer Banking Dashboard</p>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="container">
+
+        <section class="customer-card">
+            <h2>Customer Information</h2>
+            <p><strong>Name:</strong> Ahad Abdullah</p>
+            <p><strong>Account No:</strong> 1000123456</p>
+            <p><strong>Account Type:</strong> Current Account</p>
+        </section>
+<section class="dashboard-summary">
+
+    <div class="summary-box">
+        <h3>Account Status</h3>
+        <p>🟢 Active</p>
+    </div>
+
+    <div class="summary-box">
+        <h3>Account Type</h3>
+        <p id="summaryAccountType">Current Account</p>
+    </div>
+
+    <div class="summary-box">
+        <h3>Account Number</h3>
+        <p id="summaryAccountNumber">1000123456</p>
+    </div>
+
+</section>
+        <section class="balance-card">
+            <h2>Current Balance</h2>
+            <h1>Rs. <span id="balance">50000</span></h1>
+        </section>
+
+        <section class="actions">
+
+            <div class="action-box">
+                <h2>Deposit Money</h2>
+                <input type="number" id="depositAmount" placeholder="Enter amount">
+                <button onclick="deposit()">Deposit</button>
+            </div>
+
+            <div class="action-box">
+                <h2>Withdraw Money</h2>
+                <input type="number" id="withdrawAmount" placeholder="Enter amount">
+                <button onclick="withdraw()">Withdraw</button>
+            </div>
+
+        </section>
+<section class="action-box">
+    <h2>Fund Transfer</h2>
+
+    <input type="text" id="receiverAccount" placeholder="Receiver Account Number">
+
+    <input type="number" id="transferAmount" placeholder="Enter amount">
+
+    <button onclick="transferMoney()">Transfer Money</button>
+</section>
+        <section class="transactions">
+            <section class="transaction-summary">
+
+    <div>
+        <h3>Total Deposits</h3>
+        <p id="totalDeposits">Rs. 0</p>
+    </div>
+
+    <div>
+        <h3>Total Withdrawals</h3>
+        <p id="totalWithdrawals">Rs. 0</p>
+    </div>
+
+    <div>
+        <h3>Total Transfers</h3>
+        <p id="totalTransfers">Rs. 0</p>
+    </div>
+
+</section>
+            <h2>Transaction History</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody id="transactionTable">
+                    <tr>
+                        <td>Today</td>
+                        <td>Opening Balance</td>
+                        <td>Rs. 50,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>

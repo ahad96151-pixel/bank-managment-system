@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eef2f7;
+}
+
+header {
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.customer-card,
+.balance-card,
+.action-box,
+.transactions {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.customer-card h2,
+.transactions h2 {
+    margin-bottom: 15px;
+    color: #123c69;
+}
+
+.customer-card p {
+    margin: 8px 0;
+}
+
+.balance-card {
+    text-align: center;
+    background: #123c69;
+    color: white;
+}
+
+.balance-card h2 {
+    margin-bottom: 10px;
+}
+
+.balance-card h1 {
+    font-size: 35px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.action-box h2 {
+    margin-bottom: 15px;
+    color: #123c69;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #123c69;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d2f52;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f0f3f7;
+}
+
+@media (max-width: 700px) {
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+/* Login Page */
+#loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-box {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#loginMessage {
+    margin-top: 15px;
+}
+/* Dashboard Summary */
+
+.dashboard-summary {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.summary-box {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.summary-box h3 {
+    margin-bottom: 10px;
+}
+
+.summary-box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Banking Action Cards */
+
+.actions {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.action-box {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.action-box h2 {
+    margin-bottom: 15px;
+}
+
+.action-box input,
+.action-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.action-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Logout Button */
+
+header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}/* Transaction History */
+
+.transactions {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.transactions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.transactions th,
+.transactions td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.transactions th {
+    font-weight: bold;
+}
+
+.transactions tr:hover {
+    background: #f5f5f5;
+}
+/* New Account Registration */
+
+.customer-registration {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.customer-registration input,
+.customer-registration select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.customer-registration button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Search Account */
+
+.search-account {
+    display: block;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 10;
+}
+
+.search-account h2 {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.search-account input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.search-account button {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+/* Customer Accounts Table */
+
+.account-list {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    overflow-x: auto;
+}
+
+.account-list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.account-list th,
+.account-list td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+}
+
+.account-list th {
+    font-weight: bold;
+    background-color: #eef2f7;
+}@media (max-width: 768px) {
+
+    .dashboard-summary {
+        flex-direction: column;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .action-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header button {
+        width: 100%;
+    }
+
+    .transactions,
+    .account-list {
+        overflow-x: auto;
+    }
+}
