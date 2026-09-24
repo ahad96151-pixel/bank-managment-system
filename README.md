@@ -39,6 +39,9 @@ A simple web-based Bank Management System developed using HTML, CSS, and JavaScr
 ## 🌐 Live Demo
 
 This project is deployed using GitHub Pages.
+## 🌐 Live Demo
+
+[Open Bank Management System](https://ahad96151-pixel.github.io/bank-managment-system/)
 
 ## 👨‍💻 Developer
 
